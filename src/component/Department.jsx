@@ -51,11 +51,6 @@ class Department extends Component {
             />
           )}
 
-        {/* <div>fenil</div> */}
-        {/* <Route path="/admin/Department/table" exact component={DepartmentTable} /> */}
-        {/* <Route path="/admin/Department/form" exact component={() => <DepartmentForm onDepartmentSubmit={this.handleDepartmentSubmit} />} /> */}
-
-        {/* <DepartmentTable/> */}
       </React.Fragment>
 
       //  </Router>
@@ -70,8 +65,6 @@ class Department extends Component {
       CompanyID: event.target[0].value,
       DepartmentName: event.target[1].value
     };
-    //  let body= "CompanyID=" + event.target[0].value + "&Department=" + event.target[1].value;
-    //  let body= "FenilKaneria";
     axios
       .post(process.env.REACT_APP_API_URL + "/api/department", body, {
         headers: {

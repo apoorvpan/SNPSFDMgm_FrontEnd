@@ -153,7 +153,8 @@ class RoleTable extends Component {
         }
       })
       .then(response => {
-        response.data["Financialyear"]="FY2023";
+        /*Apoorv_Temp*/
+        /*response.data["Financialyear"]="FY2023";
         response.data["Employeeid"]="2456"
         response.data["Employeeusername"]="amitp"
         response.data["dateofjoiningdate"]="04/05/2021"
@@ -163,7 +164,7 @@ class RoleTable extends Component {
         response.data["totalsimpleinterest"]="5193.75"
         response.data["totalcompoundinterest"]="6683.19"
         response.data["TotalAmountCont"]=""
-        response.data["Bgroup"]="SEG"
+        response.data["Bgroup"]="SEG"*/
         this.roleObj = response.data;
 
         console.log("response", response.data);
@@ -175,17 +176,17 @@ class RoleTable extends Component {
         this.roleObj.map(data => {
           let temp = {
             data,
-            Financialyear: data["Financialyear"],
-            Employeeid:data["Employeeid"],
-            Employeeusername:data["Employeeusername"],
-            dateofjoiningdate:data["dateofjoiningdate"],
-            dateofleavingdate:data["dateofleavingdate"],
-            Location:data["Location"],
-            TotalContribution:data["TotalContribution"],
-            totalsimpleinterest:data["totalsimpleinterest"],
-            totalcompoundinterest:data["totalcompoundinterest"],
-            TotalAmountCont:data["TotalAmountCont"],
-            Bgroup:data["Bgroup"],
+            Financialyear: data["Financialyear"]|| "Not Avaiable",
+            Employeeid:data["Employeeid"]|| "Not Avaiable",
+            Employeeusername:data["Employeeusername"]|| "Not Avaiable",
+            dateofjoiningdate:data["dateofjoiningdate"]|| "Not Avaiable",
+            dateofleavingdate:data["dateofleavingdate"]|| "Not Avaiable",
+            Location:data["Location"]|| "Not Avaiable",
+            TotalContribution:data["TotalContribution"]|| "Not Avaiable",
+            totalsimpleinterest:data["totalsimpleinterest"]|| "Not Avaiable",
+            totalcompoundinterest:data["totalcompoundinterest"]|| "Not Avaiable",
+            TotalAmountCont:data["TotalAmountCont"]|| "Not Avaiable",
+            Bgroup:data["Bgroup"]|| "Not Avaiable",
             
           };
           this.rowDataT.push(temp);

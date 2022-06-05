@@ -51,11 +51,6 @@ class Position extends Component {
             />
           )}
 
-        {/* <div>fenil</div> */}
-        {/* <Route path="/admin/Position/table" exact component={PositionTable} /> */}
-        {/* <Route path="/admin/Position/form" exact component={() => <PositionForm onPositionSubmit={this.handlePositionSubmit} />} /> */}
-
-        {/* <PositionTable/> */}
       </React.Fragment>
 
       //  </Router>
@@ -70,8 +65,6 @@ class Position extends Component {
       CompanyID: event.target[0].value,
       PositionName: event.target[1].value
     };
-    //  let body= "CompanyID=" + event.target[0].value + "&Position=" + event.target[1].value;
-    //  let body= "FenilKaneria";
     axios
       .post(process.env.REACT_APP_API_URL + "/api/position", body, {
         headers: {

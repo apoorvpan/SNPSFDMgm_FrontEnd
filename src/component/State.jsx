@@ -50,12 +50,6 @@ class State extends Component {
             onFormClose={this.handleFormClose}
           />
         )}
-
-        {/* <div>fenil</div> */}
-        {/* <Route path="/admin/state/table" exact component={StateTable} /> */}
-        {/* <Route path="/admin/state/form" exact component={() => <StateForm onStateSubmit={this.handleStateSubmit} />} /> */}
-
-        {/* <StateTable/> */}
         </React.Fragment>
 
       //  </Router>
@@ -70,8 +64,6 @@ class State extends Component {
       CountryID: event.target[0].value,
       StateName: event.target[1].value
     };
-    //  let body= "CompanyID=" + event.target[0].value + "&State=" + event.target[1].value;
-    //  let body= "FenilKaneria";
     axios
       .post(process.env.REACT_APP_API_URL + "/api/state", body, {
         headers: {
